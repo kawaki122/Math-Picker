@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+    <com.example.kawak.math_picker.Utilities.CameraSourcePreview
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.kawak.math_picker.Utilities.GraphicOverlay
+            android:id="@+id/graphicOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.example.kawak.math_picker.Utilities.CameraSourcePreview>
+    <com.example.kawak.math_picker.Utilities.FocusView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:id="@+id/layoutLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:visibility="gone"
+        android:weightSum="100"
+        android:layout_margin="15dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etDetection"
+            android:layout_weight="20"
+            android:textColor="#ffffff"
+            android:background="@drawable/edit_rounded"/>
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="80"
+            android:id="@+id/ibCalculate"
+            android:background="@drawable/btn_rounded"
+            app:srcCompat="@drawable/ic_trending_flat"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+</FrameLayout>
